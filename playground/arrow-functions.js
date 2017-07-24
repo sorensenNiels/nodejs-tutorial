@@ -1,28 +1,22 @@
-"use strict";
+/* eslint no-console: "off" */
 
 const _ = require("lodash");
 
-const myName = "Niels P.";
-
-// Arrow function with parameter
-let sayHello = (name) => {
-    console.log(`Hello ${name}`);
-};
+const myName = "Niels P.",
+    sayHello = (name) => {
+        console.log(`Hello ${name}`);
+    };
 
 // Arrow function within object - watch out for the this not being set
-let obj = {
+const obj = {
     "name": myName,
     "a": () => console.log("a", this.name),
-    "b": function () {
-
+    "b" () {
         console.log("b", this.name);
-    
-},
-    c () {
-
+    },
+    "c" () {
         console.log("c", this.name);
-    
-}
+    }
 };
 
 obj.a();
