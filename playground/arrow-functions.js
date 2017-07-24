@@ -1,7 +1,5 @@
 /* eslint no-console: "off" */
 
-const _ = require("lodash");
-
 const myName = "Niels P.",
 
     sayHello = (name) => {
@@ -22,4 +20,5 @@ const myName = "Niels P.",
 obj.a();
 obj.b();
 obj.c();
+
 sayHello(myName);
