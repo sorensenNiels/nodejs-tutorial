@@ -12,12 +12,16 @@ var sayHello = (name) => {
 // Arrow function within object - watch out for the this not being set
 var obj = {
     name: myName,
-    a: () => console.log(this.name),
+    a: () => console.log('a', this.name),
     b: function() {
-        console.log(this.name)
+        console.log('b', this.name)
+    },
+    c() {
+        console.log('c', this.name);
     }
 };
 
 obj.a();
 obj.b();
+obj.c();
 sayHello(myName);
